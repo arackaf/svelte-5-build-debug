@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Input from '$lib/form/Input.svelte';
+	import InputGroup from '$lib/form/InputGroup.svelte';
 
 	export let obj: any;
 
@@ -12,6 +13,8 @@
 	<h1>Editing</h1>
 	<button on:click={() => updateObj({ things: [...obj.things, ''] })}>Add</button>
 	{#each obj.things || [] as str, index (index)}
-		<Input bind:value={str} />
+		<InputGroup labelText="a">
+			<Input bind:value={str} />
+		</InputGroup>
 	{/each}
 </div>
