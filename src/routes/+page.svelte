@@ -1,5 +1,7 @@
 <script lang="ts">
+	import Modal from '$lib/components/Modal.svelte';
 	import HandleThing from './HandleThing.svelte';
+	import ThingModal from './ThingModal.svelte';
 
 	const createEmpty = () => {
 		return {
@@ -14,4 +16,4 @@
 
 <button on:click={reset}>Do it</button>
 
-<HandleThing {obj} onHide={() => (obj = null)} />
+<ThingModal {obj} onHide={() => (obj = null)} />
