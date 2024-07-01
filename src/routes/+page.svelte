@@ -1,19 +1,9 @@
 <script lang="ts">
-	import Modal from '$lib/components/Modal.svelte';
-	import HandleThing from './HandleThing.svelte';
-	import ThingModal from './ThingModal.svelte';
+	import EditBookComponent from '$lib/components/editBook/EditBookComponent.svelte';
 
-	const createEmpty = () => {
-		return {
-			things: ['']
-		};
-	};
-
-	let obj: any = null;
-
-	const reset = () => (obj = createEmpty());
+	let editingBook: any = null;
 </script>
 
-<button on:click={reset}>Do it</button>
-
-<ThingModal {obj} onHide={() => (obj = null)} />
+<section>
+	<EditBookComponent book={editingBook} />
+</section>
