@@ -14,4 +14,4 @@
 
 <button on:click={reset}>Do it</button>
 
-<HandleThing {obj} />
+<HandleThing {obj} onHide={() => (obj = null)} />
